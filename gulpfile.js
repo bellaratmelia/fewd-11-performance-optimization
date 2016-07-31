@@ -62,18 +62,22 @@ gulp.task("minifyCSS", ["concatCSS"], function() {
 });
 
 // COMPRESS IMAGE
-gulp.task('compressImage', function () {
-  gulp.src('img/**/*.{jpg,png}')
-    .pipe(image())
-    .pipe(gulp.dest('img'));
-});
+// ------- This keeps one triggering the EPIPE error. I'm not quite sure how to solve this. -------
+
+// gulp.task('compressImage', function () {
+//   gulp.src('img/**/*.{jpg,png}')
+//     .pipe(image().on('error', function(e){
+//         console.trace(e);
+//     }))
+//     .pipe(gulp.dest('img'));
+// });
 
 
 gulp.task('clean', function() {
   del(['dist', 'css/main*.css*', 'js/app*.js*']);
 });
 
-gulp.task("build", ['minifyScripts', 'minifyCSS', 'compressImage'], function() {
+gulp.task("build", ['minifyScripts', 'minifyCSS'], function() {
   return gulp.src(["js/app.min.js", "css/main.min.css", 'index.html',
                    "img/**"], { base: './'})
             .pipe(gulp.dest('dist'));

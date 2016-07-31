@@ -7089,6 +7089,7 @@ body {
         float: left;
     }
 }
+
 .hero {
     background: url("../img/photos/photo4.jpg") no-repeat center center;
     background-size: cover;
@@ -7121,6 +7122,8 @@ body {
 }
 .image-grid {
     padding: 0 3rem;
+    margin: 0 auto;
+    max-width: 1440px;
 }
 .image-grid h2 {
     color: rgb(73, 85, 96);
@@ -7168,6 +7171,7 @@ body {
     margin-right: 1rem;
     width: 50px;
 }
+
 .reveal-modal .info {
     padding: 2rem 1rem 0;
 }

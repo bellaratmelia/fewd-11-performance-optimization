@@ -1,5 +1,7 @@
 .image-grid {
     padding: 0 3rem;
+    margin: 0 auto;
+    max-width: 1440px;
 }
 .image-grid h2 {
     color: rgb(73, 85, 96);
