@@ -48,6 +48,7 @@ gulp.task("concatCSS", function() {
         , 'css/photo-grid.css'
         , 'css/modals.css'
         , 'css/footer.css'
+        , 'css/sprites.css'
     ])
     .pipe(maps.init())
     .pipe(concat('main.css'))
